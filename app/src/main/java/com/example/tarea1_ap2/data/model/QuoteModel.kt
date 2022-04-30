@@ -1,4 +1,4 @@
-package com.example.tarea1_ap2.data.network.model
+package com.example.tarea1_ap2.data.model
 
 import com.google.gson.annotations.SerializedName
 
