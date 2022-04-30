@@ -1,4 +1,4 @@
-package com.example.tarea1_ap2.model
+package com.example.tarea1_ap2.data.model
 
 class QuoteProvider {
     companion object{
