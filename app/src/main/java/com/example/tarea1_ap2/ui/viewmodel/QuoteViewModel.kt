@@ -1,4 +1,4 @@
-package com.example.tarea1_ap2.viewmodel
+package com.example.tarea1_ap2.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

@@ -1,12 +1,11 @@
-package com.example.tarea1_ap2.view
+package com.example.tarea1_ap2.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import com.example.tarea1_ap2.R
 import com.example.tarea1_ap2.databinding.ActivityMainBinding
-import com.example.tarea1_ap2.viewmodel.QuoteViewModel
+import com.example.tarea1_ap2.ui.viewmodel.QuoteViewModel
 
 class MainActivity : AppCompatActivity() {
 
