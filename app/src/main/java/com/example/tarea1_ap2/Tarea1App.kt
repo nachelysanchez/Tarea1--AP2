@@ -1,7 +1,7 @@
 package com.example.tarea1_ap2
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class Tarea1App : Application() {
-
-}
+@HiltAndroidApp
+class Tarea1App : Application()
