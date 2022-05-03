@@ -1,14 +1,15 @@
 package com.example.tarea1_ap2.domain
 
+import com.example.tarea1_ap2.data.QuoteRepository
 import com.example.tarea1_ap2.data.model.QuoteModel
-import com.example.tarea1_ap2.data.model.QuoteProvider
+import com.example.tarea1_ap2.domain.model.Quote
 import javax.inject.Inject
 
 class GetRandomQuoteUseCase @Inject constructor(
-    private val quoteProvider : QuoteProvider
+    private val repository: QuoteRepository
 ) {
-    operator fun invoke(): QuoteModel?{
-        val quotes = quoteProvider.quotes
+    suspend operator fun invoke(): Quote?{
+        val quotes = repository.getAllQuotesFromDatabase()
         if(!quotes.isNullOrEmpty()){
             val randomNumber = (quotes.indices).random()
             return quotes[randomNumber]

@@ -2,8 +2,6 @@ package com.example.tarea1_ap2.data
 
 import com.example.tarea1_ap2.data.database.dao.QuoteDao
 import com.example.tarea1_ap2.data.database.entities.QuoteEntity
-import com.example.tarea1_ap2.data.model.QuoteModel
-import com.example.tarea1_ap2.data.model.QuoteProvider
 import com.example.tarea1_ap2.data.network.QuoteService
 import com.example.tarea1_ap2.domain.model.Quote
 import com.example.tarea1_ap2.domain.model.toDomain
@@ -25,4 +23,12 @@ class QuoteRepository @Inject constructor(
         return response.map{it.toDomain()}
     }
 
+    suspend fun insertQuotes(quotes:List<QuoteEntity>){
+        quoteDao.insertAll(quotes)
+    }
+
+
+    suspend fun clearQuotes(){
+        quoteDao.deleteAllQuotes()
+    }
 }
